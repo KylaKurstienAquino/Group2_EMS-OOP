@@ -7,7 +7,7 @@ import java.util.*;
 
 public class HrManageEmp extends JFrame implements ActionListener{
     
-    private JButton addEmp, delEmp;
+    private JButton addEmp, delEmp, rateEmp;
     
     public HrManageEmp(){
         setTitle("Manage Employee");
@@ -49,5 +49,6 @@ public class HrManageEmp extends JFrame implements ActionListener{
             dispose();
             new DeleteEmployee();
         }
+
     }
 }

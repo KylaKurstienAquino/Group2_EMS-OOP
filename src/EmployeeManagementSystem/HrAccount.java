@@ -20,8 +20,9 @@ public class HrAccount extends JPopupMenu implements ActionListener{
         
         
         add(searchProf);
-        add(logOut);
         add(timeoff);
+        add(logOut);
+        
         
     }
     
@@ -52,5 +53,6 @@ public class HrAccount extends JPopupMenu implements ActionListener{
         else if (e.getSource() == timeoff) {
             new ChooseEmpId();
         }
+       
     }
 }

@@ -6,17 +6,13 @@ import java.awt.event.*;
 
 public class ManagerAccount extends JPopupMenu implements ActionListener{
     
-    private JMenuItem logOut, searchProf, perfor, perfor1;
+    private JMenuItem logOut, searchProf, perfor;
     
     public ManagerAccount() {
         
         perfor = new JMenuItem("Performance");
         perfor.addActionListener(this);
-        
-        perfor1 = new JMenuItem("Rate");
-        perfor1.addActionListener(this);
-        
-        
+             
         searchProf = new JMenuItem("Search Profile");
         searchProf.addActionListener(this);
         
@@ -26,7 +22,6 @@ public class ManagerAccount extends JPopupMenu implements ActionListener{
         
         add(searchProf);
         add(perfor);
-        add(perfor1);
         add(logOut);
         
     }
@@ -57,8 +52,6 @@ public class ManagerAccount extends JPopupMenu implements ActionListener{
         else if (e.getSource() == perfor) {
             new ManagerVUDReview();
         }
-        else if (e.getSource() == perfor1) {
-            new PerformanceReview();
-        }
+       
     }
 }
