@@ -15,7 +15,7 @@ public class HrExpenses extends JFrame implements ActionListener
 	private final JButton sub, reset, back;
         private final JLabel pol1, pol2;
         private JDateChooser rqD, rqF;
-        private JScrollPane scrollPane;
+        
         
     public HrExpenses() 
     {
@@ -170,11 +170,6 @@ public class HrExpenses extends JFrame implements ActionListener
                 tout.setLineWrap(true);
                 tout.setEditable(false);
                 add(tout);
-                
-                scrollPane = new JScrollPane(tout);
-                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                scrollPane.setPreferredSize(new Dimension(600,400));        
-                getContentPane().add(scrollPane);
              
                 pol1 = new JLabel("");
                 pol1.setFont(new Font("Arial", Font.PLAIN, 15));

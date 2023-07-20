@@ -9,7 +9,7 @@ department varchar(50) not null,
 reqDate date, 
 projName varchar(500) not null, 
 reqEndDate date,
-amount int, 
+amount varchar(100) not null, 
 notes varchar(100) not null,
 initiate boolean,
 planning boolean,  
@@ -20,7 +20,7 @@ summary text,
 status VARCHAR(20)
 );
 /*
-INSERT INTO expense_request (name, employeeId, email, reqDate, projName, reqEndDate, amount, notes, inititate, planning, execution, perform, closure )
+INSERT INTO expense_request (name, employeeId, email, department, reqDate, projName, reqEndDate, amount, notes, inititate, planning, execution, perform, closure, summary )
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);*/
 
 

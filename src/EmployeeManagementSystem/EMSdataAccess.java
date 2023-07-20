@@ -228,7 +228,7 @@ public class EMSdataAccess
         try 
         {
             PreparedStatement statement = connection.prepareStatement(
-                " INSERT INTO expense_request (name, employeeId, email, department, reqDate, projName, reqEndDate, amount, notes, inititate, planning, execution, perform, closure, summary )" +
+                "INSERT INTO expense_request (name, employeeId, email, department, reqDate, projName, reqEndDate, amount, notes, initiate, planning, execution, perform, closure, summary)" +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Pending')");
             
             statement.setString(1, employee.getName());
@@ -238,20 +238,20 @@ public class EMSdataAccess
             statement.setDate(5, new java.sql.Date(employee.getdateRequest().getTime()));
             statement.setString(6, employee.getProjName());
             statement.setDate(7, new java.sql.Date(employee.getdateEnd().getTime()));
-            statement.setInt(8, employee.getAmount());
+            statement.setString(8, employee.getAmount());
             statement.setString(9, employee.getNotes());
-            statement.setBoolean(8, employee.isInitiation());
-            statement.setBoolean(9, employee.isPlanning());
-            statement.setBoolean(10, employee.isExecution());
-            statement.setBoolean(11, employee.isPerform());
-            statement.setBoolean(12, employee.isClosure());
-            statement.setString(16, employee.getSummary());
+            statement.setBoolean(10, employee.isInitiation());
+            statement.setBoolean(11, employee.isPlanning());
+            statement.setBoolean(12, employee.isExecution());
+            statement.setBoolean(13, employee.isPerform());
+            statement.setBoolean(14, employee.isClosure());
+            statement.setString(15, employee.getSummary());
  
             
             int rowsAffected = statement.executeUpdate();
             statement.close();
             
-            return rowsAffected > 0;
+            return rowsAffected > 1;
         } 
         catch (SQLException e) 
         {
